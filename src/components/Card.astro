@@ -1,0 +1,28 @@
+---
+const {data} = Astro.props;
+---
+
+<a href={`programs/${data.slug}`}>
+<div>
+<article>
+  <img   src={`/img/${data.image}`} alt="" />
+  <p>{data.name}</p>
+</article>
+</div>
+</a>
+
+<style>
+    img{
+        max-width: 70%;
+        border: 1px solid var(--secondary-color)
+    }
+
+    p{
+        font-family: regular;
+        color: var( --text-light-color);
+        font-size: 30px;
+        margin-bottom: 20%;
+        margin-top: 0%;
+    }
+    
+</style>

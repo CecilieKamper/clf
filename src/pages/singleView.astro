@@ -1,0 +1,130 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="container">
+    <img src="img/the_wave.webp" alt="" />
+  </div>
+
+  <div class="overlay">
+    <h1>THE WAVE</h1>
+    <div class="kunstner">
+      <h3>Vertigo og Lil Lacy</h3>
+    </div>
+  </div>
+
+  <h2>LOKATION</h2>
+  <h3>Ofelia Plads, Kvæsthusmolen</h3>
+  <h2>OM VÆRKET</h2>
+  <p>
+    I december vendte den ikoniske 80 meter lange lyd- og lysskulptur THE WAVE
+    tilbage til Ofelia Plads.
+    <br />
+    <br />
+     Til denne version af det foranderlige værk har kunstnerkollektivet Vertigo
+    skabt et helt nyt forløb i lys i et tæt samarbejde med komponisten Lil Lacy,
+    som til lejligheden har komponeret et nyt værk for akustiske instrumenter
+    indspillet af musikere fra Det Kgl. Kapel. Både lyd og lys er inspireret af
+    bølgers natur og bevægelse og er udviklet i en tæt dialog mellem de
+    involverede lyd- og lyskunstnere, som med værket inviterer publikum til at
+    dykke med ud i bølgernes univers.
+    <br />
+    <br />
+     Vertigo og Lacy har sammenflettet de soniske og visuelle elementer for at
+    skabe en organisk og dynamisk oplevelse, hvor bølgerne manifesterer sig i
+    forskellige former og materialer fra lydbølger af musik og byens lyde til
+    lysbølger fra skulpturens lysdioder og den omkringliggende by. Disse bølger
+    er i konstant bevægelse, påvirket af miljøet, vind og vejr. Tanken bag er
+    THE WAVE som en levende fortælling, hvor lyd og lys i samspil skaber en
+    cyklisk og uendelig bølgebevægelse.
+    <br />
+    <br />
+     Kunstnerkollektivet Vertigo har eksisteret siden 2010 og består af Amalie
+    Solander, Frederik Hilmer Svanholm, Jeppe D. Kristensen, Mikkel Meyer og
+    Vibeke Bertelsen. De er kendt i ind- og udland for deres visuelle scenografi
+    og installationskunst i stor skala. I deres installationer arbejder de med
+    at skabe fysiske digitale verdener, der giver beskueren en sanselig
+    oplevelse i lys og lyd.
+    <br />
+    <br />
+     Komponist Lil Lacy er en dansk-amerikansk klassisk komponist, som arbejder
+    med musik indenfor mange genrer og udtryksformer. Hun har udgivet flere
+    kritikerroste og prisvindende album med forskellige ensembler, samt
+    komponeret musik til alt fra klassiske symfoniorkestre over kor til
+    eksperimenterende noise-cello m.v. Hun indgår ofte i tætte tværkunstneriske
+    samarbejder i tilblivelsen af musik til forestillinger, installationer,
+    dans, film og teater. Hun modtog i 2020 Léonie Sonnings Talentpris.
+  </p>
+  <h2>TAK TIL</h2>
+  <p>Foreningen Ofelia Plads, Det Kgl. Teater, Jeudan</p>
+</MainLayout>
+
+<style>
+  h2 {
+    color: var(--primary-color);
+    font-size: 60px;
+    font-family: bold;
+    margin-left: 15%;
+    margin-bottom: 0;
+  }
+
+  p,
+  h3 {
+    color: var(--text-light-color);
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  h3 {
+    font-size: 30px;
+    font-family: bold;
+    margin-bottom: 5%;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 30px;
+    font-family: regular;
+    margin-bottom: 5%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    background-color: var(--background-color);
+    opacity: 90%;
+    margin-top: 2%;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    font-family: bold;
+    font-size: 150px;
+    text-shadow:
+      0 0 7px var(--primary-color),
+      0 0 101px var(--primary-color);
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .kunstner h3 {
+    color: var(--secondary-color);
+    margin-left: 2%;
+    font-size: 45px;
+    text-shadow:
+      0 0 7px var(--secondary-color),
+      0 0 101px var(--secondary-color);
+    margin-top: 0;
+  }
+</style>

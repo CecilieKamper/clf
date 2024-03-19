@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../../src/components/Card.astro";
+const data = await fetch(
+  "https://gqbjpcnjustciypencgv.supabase.co/rest/v1/clf",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdxYmpwY25qdXN0Y2l5cGVuY2d2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MDAzODEsImV4cCI6MjAyNjA3NjM4MX0.IhhO88_yl6t01bFXvuccDUU0VebufyoR4FsGS7xUozY",
+    },
+  }
+).then((res) => res.json());
+
+// console.log(data);
+---
+
+<MainLayout>
+  <h1>PROGRAM</h1>
+  <h2>COPENHAGEN LIGHT FESTIVAL</h2>
+  <div class="grid1_1">
+    {
+      data.map((art) => {
+        return <Card data={art} />;
+      })
+    }
+  </div>
+</MainLayout>
+
+<style>
+  h1 {
+    color: var(--primary-color);
+    text-shadow:
+      0 0 7px var(--primary-color),
+      0 0 101px var(--primary-color);
+    font-size: 300px;
+    font-family: bold;
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    color: var(--secondary-color);
+    text-shadow:
+      0 0 7px var(--secondary-color),
+      0 0 101px var(--secondary-color);
+    font-size: 70px;
+    font-family: bold;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 12%;
+  }
+</style>

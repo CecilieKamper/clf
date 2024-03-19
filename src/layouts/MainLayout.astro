@@ -1,0 +1,132 @@
+---
+import Navigation from "../components/Navigation.astro";
+import "../css/generel.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="/">
+            <img class="logo" src="img/clf_logo.webp" alt="" />
+          </a>
+        </div>
+        <div>
+          <a href="/#">FESTIVAL KORT</a>
+          <a href="program">PROGRAM</a>
+          <a href="/#">BOOK</a>
+          <a href="singleView">Single View</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <h4>Kontakt</h4>
+      <ul>
+        <li>Mail:</li>
+        <li>info@copenhagenlightfestival.org</li>
+      </ul>
+      <ul>
+        <li>Telefon:</li>
+        <li>+45 25 55 66 04</li>
+      </ul>
+      <button>INFO</button>
+      <button>OM</button>
+    </footer>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: bold;
+    src: url(../fonts/trade_gothic_bold_condensed_no._20-webfont.woff2);
+  }
+
+  @font-face {
+    font-family: regular;
+    src: url(../fonts/trade_gothic_lt_std_condensed_no._18-webfont.woff2);
+  }
+  a,
+  p,
+  li {
+    font-family: regular;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: bold;
+  }
+
+  .logo {
+    /* display: flex; */
+    width: 100px;
+  }
+  body {
+    background-color: var(--background-color);
+  }
+
+  nav a {
+    text-decoration: none;
+    padding: 4em;
+    color: var(--text-light-color);
+    font-size: 18px;
+  }
+
+  nav a:hover {
+    color: var(--secondary-color);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+  }
+
+  footer {
+    background-color: var(--secondary-color);
+    padding: 1.5%;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 0.2%;
+    color: var(--text-dark-color);
+    font-size: 20px;
+  }
+
+  h4 {
+    color: var(--text-dark-color);
+    margin-left: 2.2%;
+    text-decoration: underline;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  button {
+    padding: 1rem;
+    color: var(--text-light-color);
+    background-color: var(--text-dark-color);
+    font-family: bold;
+    border-radius: 20%;
+    font-size: 20px;
+    margin-left: 2%;
+  }
+
+  button:hover {
+    background-color: var(--primary-color);
+  }
+</style>
