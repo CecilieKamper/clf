@@ -1,21 +1,22 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+const { myData } = Astro.props;
 ---
 
 <MainLayout>
   <div class="container">
-    <img src="img/the_wave.webp" alt="" />
+    <img src={`/img/${myData.image}`} alt="" />
   </div>
 
   <div class="overlay">
-    <h1>THE WAVE</h1>
+    <h1>{myData.name}</h1>
     <div class="kunstner">
-      <h3>Vertigo og Lil Lacy</h3>
+      <h3>{myData.artist}</h3>
     </div>
   </div>
 
   <h2>LOKATION</h2>
-  <h3>Ofelia Plads, Kvæsthusmolen</h3>
+  <h3>{myData.location}</h3>
   <h2>OM VÆRKET</h2>
   <p>
     I december vendte den ikoniske 80 meter lange lyd- og lysskulptur THE WAVE
@@ -57,7 +58,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     dans, film og teater. Hun modtog i 2020 Léonie Sonnings Talentpris.
   </p>
   <h2>TAK TIL</h2>
-  <p>Foreningen Ofelia Plads, Det Kgl. Teater, Jeudan</p>
+  <p>{myData.thank}</p>
 </MainLayout>
 
 <style>

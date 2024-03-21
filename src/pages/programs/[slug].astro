@@ -20,8 +20,7 @@ export async function getStaticPaths() {
 }
 
 const { myData } = Astro.props;
+import SingleView from "../SingleView.astro";
 ---
 
-<singleView>
-  <h1>{myData.name}</h1>
-</singleView>
+<SingleView {myData} />

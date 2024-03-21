@@ -3,5 +3,46 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
- 
+  <div class="container">
+    <img src="img/background.webp" alt="" />
+    <h1>COPENHAGEN <br /> LIGHT <br />FESTIVAL</h1>
+    <h2>2-25 <br />FEBRUAR</h2>
+  </div>
 </MainLayout>
+
+<style>
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    font-family: bold;
+    font-size: 200px;
+    text-shadow:
+      0 0 7px var(--primary-color),
+      0 0 101px var(--primary-color);
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+
+  h2 {
+    color: var(--secondary-color);
+    font-family: bold;
+    font-size: 75px;
+    text-shadow:
+      0 0 7px var(--secondary-color),
+      0 0 101px var(--secondary-color);
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    position: absolute;
+    top: 52%;
+    left: 84%;
+  }
+</style>
